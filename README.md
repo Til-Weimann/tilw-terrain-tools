@@ -23,7 +23,34 @@ This tool allows Arma Reforger modders to **easily create much improved paper ma
 8. Switch back the the Terrain Tools main tab, and click Export Heightmap after selecting the modified instead of base version. Save it specifically as "hm.png" in the data subfolder of the download folder.
 9. Go into the data subfolder using the Explorer, click into the file path bar in the top and copy the folder path.
 10. Switch back to the Workbench and find the Tree Export tool, it has a pine tree icon. Paste the copied data path into the tool options, and click Export in the bottom.
-11. You should now be good to run the Python script from the main folder. It will created an EhM.png file, which is your map - you can rename it to something else, like the name of your terrain.
-12. Import the PNG into the WB, the standard path is UI/Textures/Map/worlds.
-13. Open the imported EDDS texture, go into the import settings on the right and change "Color Space" to "To SRGB", then hit "Reimport Resource (PC)" in the top.
-14. Back in your terrain world, find your MapEntity prefab and set "Satellite background texture" to the texture.
+11. Run the requirements.bat file, it will make sure you have all necessary Python dependencies (you need of course need Python if you don't have it yet).
+12. You should now be good to run the generate.py script from the main folder. It will created an EhM.png file, which is your map - you can rename it to something else, like the name of your terrain.
+13. Import the PNG into the WB, the standard path is UI/Textures/Map/worlds.
+14. Open the imported EDDS texture, go into the import settings on the right and change "Color Space" to "To SRGB", then hit "Reimport Resource (PC)" in the top.
+15. Back in your terrain world, find your MapEntity prefab and set "Satellite background texture" to the texture.
+
+# QA
+
+> My trees were not plotted correctly, or the water level is weird.
+
+Make sure your terrain is located at the 0 0 0 coordinate.
+
+> Can I customize the map somehow?
+
+Yes, the conf.yml file has extra parameters that allow you to make some adjustments.
+
+> The python script doesn't run correctly, but automatically closes before I can see what's wrong.
+
+In the folder, click the top bar like when copying the file path, type "cmd", press enter. Now enter "generate.py" to run the script. This way, the window will always stay open and allow you to read any errors.
+
+> I need help with my general Python setup, I can't get it to work.
+
+I'll gladly help with things related to the actual script, but I will not help you with installing Python, use your favorite search engine for this.
+
+> I don't have QGIS and don't want to install it. Is there another way?
+
+You do need the gdaldem.exe application, however you can also install gdal / gdaldem via the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/) if you don't want QGIS.
+
+> I have a question, how do I best contact you?
+
+On Discord, my name is tilw. I am active on the ARMA discord.
