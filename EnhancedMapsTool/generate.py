@@ -62,7 +62,7 @@ del oceanmask
 
 # Colorize ocean
 ocean_colors = str(conf["ocean-color"]).split(" ")
-ocean_darkness = 2 * 255.0 * float(conf["ocean-darkness"]) * 10 * ocean_threshold
+ocean_darkness = 1.75 * 255.0 * float(conf["ocean-darkness"]) * 10 * ocean_threshold
 oc_r = float(ocean_colors[0]) / ocean_darkness
 oc_g = float(ocean_colors[1]) / ocean_darkness
 oc_b = float(ocean_colors[2]) / ocean_darkness
