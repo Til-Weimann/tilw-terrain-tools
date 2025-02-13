@@ -31,7 +31,7 @@ This tool allows Arma Reforger modders to **easily create much improved paper ma
 
 > My trees were not plotted correctly, or the water level is weird.
 
-Make sure your terrain is located at the 0 0 0 coordinate.
+Make sure your terrain is located at the 0 0 0 coordinate. If it's not, either fix that or use the terrain-coords option in the config.
 
 > Can I customize the map somehow?
 
