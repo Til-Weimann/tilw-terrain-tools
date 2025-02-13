@@ -22,7 +22,7 @@ This tool allows Arma Reforger modders to **easily create much improved paper ma
 9. Go into the data subfolder using the Explorer, click into the file path bar in the top and copy the folder path.
 10. Switch back to the Workbench and find the Tree Export tool, it has a pine tree icon. Paste the copied data path into the tool options, and click Export in the bottom.
 11. Run the requirements.bat file, it will make sure you have all necessary Python dependencies (you need of course need Python if you don't have it yet).
-12. You should now be good to run the generate.py script from the main folder. It will created a result.png file, which is your map - you can rename it to something else, like the name of your terrain.
+12. You should now be good to run the generate.py script from the main folder. It will create a result.png file, which is the map - you can rename it to something else, like the name of your terrain.
 13. Import the PNG into the WB, the standard path is UI/Textures/Map/worlds.
 14. Open the imported EDDS texture, go into the import settings on the right and change "Color Space" to "To SRGB", then hit "Reimport Resource (PC)" in the top.
 15. Back in your terrain world, find your MapEntity prefab and set "Satellite background texture" to the texture.
