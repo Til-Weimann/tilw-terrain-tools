@@ -2,7 +2,7 @@
 This tool allows Arma Reforger modders to **easily create much improved paper maps** for their terrains.
 
 > [!NOTE]
-> If this tool helped you, please link this repository in your mod description, so other modders can find out about it.
+> If this tool helped you, please link it in your mod description, so other modders can find out about it.
 >
 > **Example:** Paper Map created using the [Enhanced Maps](https://github.com/Til-Weimann/EnhancedMaps/) tool
 
