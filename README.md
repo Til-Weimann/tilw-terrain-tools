@@ -27,7 +27,7 @@ This tool allows Arma Reforger modders to **easily create much improved paper ma
 14. Open the imported EDDS texture, go into the import settings on the right and change "Color Space" to "To SRGB", then hit "Reimport Resource (PC)" in the top.
 15. Back in your terrain world, find your MapEntity prefab and set "Satellite background texture" to the texture.
 
-# QA
+# Q&A
 
 > My trees were not plotted correctly, or the water level is weird.
 
