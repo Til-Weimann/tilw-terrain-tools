@@ -10,7 +10,7 @@ This tool allows Arma Reforger modders to **easily create much improved paper ma
 
 # Usage
 
-1. Click the green Code button in the top right of this page, and select "Download ZIP".
+1. Click the green "<> Code" button in the top right of this repository, and select "Download ZIP".
 2. Extract the "EnhancedMapsTool" folder from the ZIP file to a place of your liking.
 3. The tool needs the GDALDEM application to work, it is included in QGIS (bin subfolder). Download it if you don't have it yet.
 4. Open conf.yml from the EnhancedMapsTool folder with a text editor, and paste the path to gdaldem.exe so the tool can find it.
