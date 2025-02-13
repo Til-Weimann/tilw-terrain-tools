@@ -4,7 +4,7 @@ This tool allows Arma Reforger modders to **easily create much improved paper ma
 > [!NOTE]
 > If this tool helped you, please link it in your mod description, so other modders can find out about it.
 >
-> **Example:** Paper Map created using the [Enhanced Maps](https://github.com/Til-Weimann/EnhancedMaps/) tool
+> **Example:** Paper Map created using the [Enhanced Maps Tool](https://github.com/Til-Weimann/EnhancedMapsTool/)
 
 ![t](https://github.com/user-attachments/assets/78a4a97c-17d9-493c-a73e-16b32de27c2c)
 
