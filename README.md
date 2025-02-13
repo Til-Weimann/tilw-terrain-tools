@@ -1,6 +1,4 @@
 # Enhanced Maps Tool
-'Enhanced Maps' custom map generation tool for Arma Reforger.
-
 This tool allows Arma Reforger modders to **easily create much improved paper maps** for their terrains.
 
 > [!NOTE]
@@ -49,7 +47,7 @@ I'll gladly help with things related to the actual script, but I will not help y
 
 > I don't have QGIS and don't want to install it. Is there another way?
 
-You do need the gdaldem.exe application, however you can also install gdal / gdaldem via the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/) (or from [other distributors](https://gdal.org/en/stable/download.html#binaries) if you don't want QGIS.
+You do need the gdaldem.exe application, however you can also install gdal / gdaldem via the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/) (or from [other distributors](https://gdal.org/en/stable/download.html#binaries)) if you don't want QGIS.
 
 > I have a question, how do I best contact you?
 
