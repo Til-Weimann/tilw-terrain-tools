@@ -13,13 +13,69 @@ terrain_size = (round(float(nums[0])), round(float(nums[1])))
 
 wdir = os.getcwd()
 masks_dir = os.path.join(wdir, "masks")
-mat_dir = os.path.join(wdir, "Surfaces")
+data_dir = os.path.join(wdir, "data")
 
-# Required functions
+# Utils -----------------------------------------------------------------------------------------------------------
+
+
+class IncrementalBlender:
+    def __init__(self):
+        """
+        Initialize the blender with accumulators for the blended image and total mask.
+        """
+        self.blended_accumulator = None
+        self.total_mask_accumulator = None
+
+    def blend(self, image, mask):
+        """
+        Blend an image with a mask into the accumulated result.
+
+        Args:
+            image (PIL.Image): The RGBA image to blend.
+            mask (PIL.Image): The grayscale mask corresponding to the image.
+
+        Returns:
+            self: The IncrementalBlender instance (for chaining).
+        """
+        # Convert image and mask to NumPy arrays
+        img_np = np.array(image.convert("RGBA"), dtype=np.float32)
+        mask_np = np.array(mask.convert("L"), dtype=np.float32) / 255.0  # Normalize mask to [0, 1]
+
+        # If it's the first image, initialize the accumulators
+        if self.blended_accumulator is None:
+            self.blended_accumulator = np.zeros_like(img_np, dtype=np.float32)
+            self.total_mask_accumulator = np.zeros(mask_np.shape, dtype=np.float32)
+
+        # Accumulate the weighted blend and update the total mask
+        self.blended_accumulator += img_np * mask_np[..., None]
+        self.total_mask_accumulator += mask_np
+
+        return self  # Enable method chaining
+
+    def get_result(self):
+        """
+        Finalize the blended image by normalizing the accumulated values.
+
+        Returns:
+            PIL.Image: The blended RGBA image.
+        """
+        if self.blended_accumulator is None:
+            raise ValueError("No images have been blended yet.")
+
+        # Normalize the blended image by the total mask
+        total_mask_accumulator = np.clip(self.total_mask_accumulator, 1e-6, None)  # Avoid division by zero
+        result = self.blended_accumulator.copy()
+        result[..., :3] /= total_mask_accumulator[..., None]  # Normalize RGB
+        result[..., 3] = 255  # Set alpha channel to fully opaque
+
+        # Convert back to a PIL image
+        result = np.clip(result, 0, 255).astype(np.uint8)
+        return Image.fromarray(result, mode="RGBA")
+
 
 def get_mat_param(mat_name, param_name):
     # Search for the mat_name file
-    for mp in Path(mat_dir).rglob(mat_name + '.emat'):
+    for mp in Path(data_dir).rglob(mat_name + '.emat'):
         result = search_mat_file(mp, param_name) # Search for parameter
         if result != None:
             return result
@@ -56,41 +112,19 @@ def search_mat_file(mat_fp, param_name):
 def extract_fn_from_rn(rn):
     return rn.split('.')[-2].split('/')[-1]
 
-def get_fp_from_dir(fn, dir):
-    for fp in Path(dir).rglob(fn):
-        return fp
-    
-def blend_images_with_masks(images, masks):
-    # Ensure the images and masks are all the same size
-    size = images[0].size
-    images = [img.convert("RGBA").resize(size) for img in images]
-    masks = [mask.convert("L").resize(size) for mask in masks]
-    
-    # Normalize masks so they add up to 1 at every pixel
-    masks_np = [np.array(mask, dtype=np.float32) / 255.0 for mask in masks]
-    del masks
-    total_mask = sum(masks_np)
-    masks_np = [mask / total_mask for mask in masks_np]
-    del total_mask
-    
-    # Convert images to numpy arrays
-    images_np = [np.array(img, dtype=np.float32) for img in images]
-    del images
-    
-    # Blend images using the masks
-    blended = sum(img * mask[..., None] for img, mask in zip(images_np, masks_np))
-    del masks_np
-    
-    # Convert back to PIL image
-    blended = np.clip(blended, 0, 255).astype(np.uint8)
-    return Image.fromarray(blended, mode="RGBA")
+def find_file_in_dir(dir, name, extensions):
+    for ext in extensions:
+        pattern = f"{name}.{ext}"
+        for fp in Path(dir).rglob(pattern):
+            return fp
 
 def linear_to_srgb(color):
     def convert(c):
         return 12.92 * c if c <= 0.0031308 else 1.055 * (c ** (1 / 2.4)) - 0.055
     return tuple(convert(c) for c in color)
 
-# Generation
+
+# Generation ----------------------------------------------------------------------------------------------------
 
 print("Starting generation...")
 start_time = time.time()
@@ -98,8 +132,12 @@ start_time = time.time()
 images = []
 masks = []
 
+blender = IncrementalBlender()
+
 for mask_file in os.listdir(masks_dir):
 
+    if not mask_file.endswith(".png"):
+        continue
     mask_name = os.fsdecode(mask_file).removesuffix('.png')
     print("Processing mask: " + mask_name)
     middle_scale = float(get_mat_param(mask_name, "MiddleScaleUV"))
@@ -109,7 +147,7 @@ for mask_file in os.listdir(masks_dir):
     if mm_name is None:
         print("ERROR - No material found for " + mask_name + ", skipping...")
         continue
-    mm_fp = get_fp_from_dir(extract_fn_from_rn(mm_name) + ".png", mat_dir)
+    mm_fp = find_file_in_dir(data_dir, extract_fn_from_rn(mm_name), ["png", "jpg"])
     if mm_fp is None:
         print("ERROR - No texture found for " + mm_name + ", skipping...")
         continue
@@ -149,12 +187,10 @@ for mask_file in os.listdir(masks_dir):
     layer_np = np.clip(layer_np, 0, 255)
     layer = Image.fromarray(layer_np.astype(np.uint8), "RGBA")
     
-    images.append(layer)
-    masks.append(mask)
+    blender.blend(layer, mask)
 
-print("Blending layers...")
-result = blend_images_with_masks(images, masks)
-del layer, layer_np, middle_map
+result = blender.get_result()
+del layer, layer_np, middle_map, mask
 print("Saving result...")
 result.save(os.path.join(wdir, "RESULT.png"))
 del result
