@@ -1,56 +1,20 @@
-# Enhanced Maps Tool
-This tool allows Arma Reforger modders to **easily create much improved paper maps** for their terrains.
+# tilw-terrain-tools
+This repository contains custom tools created by TilW, useful for terrain creation.
 
 > [!NOTE]
-> If this tool helped you, please link it in your mod description, so other modders can find out about it.
+> If these tools helped you, please link them in your mod description, so other modders can find out about them.
 >
-> **Example:** Paper Map created using the [Enhanced Maps Tool](https://github.com/Til-Weimann/EnhancedMapsTool/)
+> **Example:** Paper Map created using the [Enhanced Map Tool](https://github.com/Til-Weimann/tilw-terrain-tools/)
 
 ![t](https://github.com/user-attachments/assets/78a4a97c-17d9-493c-a73e-16b32de27c2c)
 
-# Usage
+# Tools
 
-1. Click the green "<> Code" button in the top right of this repository, and select "Download ZIP".
-2. Extract the "EnhancedMapsTool" folder from the ZIP file to a place of your liking.
-3. The tool needs the GDALDEM application to work, it is included in QGIS (bin subfolder). Download it if you don't have it yet.
-4. Open conf.yml from the EnhancedMapsTool folder with a text editor, and paste the path to gdaldem.exe so the tool can find it.
-5. Download the [Enhanced Maps](https://reforger.armaplatform.com/workshop/644B042109700804-EnhancedMaps) mod from the Workshop.
-6. Add the mod as a project to the Workbench launcher. Right click your terrain mod, select "Open with Addons", choose Enhanced Maps and open.
-> [!TIP]
-> Enhanced Maps does **not** need to be a dependency of your mod.
-6. Open your terrain world, switch to the Terrain Tools "Info & Diags" tab.
-7. Again open **conf.yml**, this time entering cell-size (planar resolution), height-range-min and height-range-max from the Info & Diags tab, if they differ.
-8. Switch back the the Terrain Tools main tab, and click "Export Heightmap" after selecting "Modified" instead of "Base" on the right of the button. Save it specifically as "hm.png" in the **data subfolder** of the EnhancedMapsTool folder.
-9. Go into the data subfolder using Windows Explorer, click into the right side of the top file path bar and copy the folder path.
-10. Switch back to the Workbench and find the Tree Export tool, it has a pine tree icon. Paste the copied data path into the tool options, and click Export in the bottom. This will export tree positions to the data folder.
-11. Run the requirements.bat file, it will make sure you have all necessary Python dependencies (you of course also need Python if you don't have it yet).
-12. You should now be good to run the generate.py script from the EnhancedMapsTool folder. It will create a RESULT.png file, which is the map texture - you can rename it to something else, like the name of your terrain.
-13. Import the PNG into the Workbench, the standard path is UI/Textures/Map/worlds/.
-14. Open the imported EDDS texture, go into the import settings on the right and change "Color Space" to "To SRGB", then hit "Reimport Resource (PC)" in the top.
-15. Back in your terrain world, find your MapEntity prefab and set "Satellite background texture" to the texture.
+- Enhanced Map Tool ([Guide](https://github.com/Til-Weimann/tilw-terrain-tools/wiki/Enhanced-Map-Tool))
+- TilW Satmap Tool
 
 # Q&A
 
-> I don't have QGIS and don't want to install it. Is there another way?
-
-You do need the gdaldem.exe application, however you can also install gdal / gdaldem via the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/) (or from [other distributors](https://gdal.org/en/stable/download.html#binaries)) if you don't want QGIS.
-
-> My trees were not plotted correctly, or the water level is weird.
-
-Make sure your terrain is located at the 0 0 0 coordinate. If it's not, either fix that or use the terrain-coords option in the config.
-
-> Can I customize the map somehow?
-
-Yes, the conf.yml file has extra parameters that allow you to make some adjustments.
-
-> The python script doesn't run correctly, but automatically closes before I can see what's wrong.
-
-In the folder, click the top bar like when copying the file path, type "cmd", press enter. Now enter "generate.py" to run the script. This way, the window will always stay open and allow you to read any errors.
-
-> I need help with my general Python setup, I can't get it to work.
-
-I'll gladly help with things related to the actual script, but I will not help you with installing Python, use your favorite search engine for this.
-
 > I have a question, how do I best contact you?
 
-On Discord, my name is tilw. I am active on the ARMA discord.
+On Discord, my name is tilw. I am also on the ARMA discord.
