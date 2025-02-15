@@ -1,0 +1,20 @@
+TerrainMaterial {
+ Diffuse 1 1 1 1
+ SurfaceProperties "{D745FD8FC67DB26A}Common/Materials/Game/stone.gamemat"
+ BCRMap "{6C17D755A1572231}Terrains/Common/Surfaces/Data/SeaBed_01_BCR.edds"
+ NHOMap "{4B209C11A2116426}Terrains/Common/Surfaces/Data/SeaBed_01_NHO.edds"
+ DielectricReflectance 0.02
+ ParallaxScale 0.019
+ SatMapBlend 0.5
+ LocalShadowBias 0.735
+ CavityFromAO 0.831
+ DetailMaxDistance 106.667
+ DetailBlendDistance 140
+ ClutterConfig "{693C8628BDB84B53}Configs/Clutter/Sets/c_set_SeaBed_01.conf"
+ DebugColor 1 0.41 0 0
+ BCRMiddleMap "{F47A706758F1F382}Terrains/Common/Surfaces/Data/SeaBed_01_Middle_BCR.edds"
+ NHOMiddleMap "{D34D3B235BB7B595}Terrains/Common/Surfaces/Data/SeaBed_01_Middle_NHO.edds"
+ MiddleNOBlend 0.38
+ MiddleNOPower 0.8
+ MiddleBCRBlend 0.3
+}

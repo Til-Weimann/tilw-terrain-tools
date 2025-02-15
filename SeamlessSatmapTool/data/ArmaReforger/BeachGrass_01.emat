@@ -1,0 +1,26 @@
+TerrainMaterial {
+ SpecularIBL 0.502 0.502 0.502 1
+ SurfaceProperties "{39B38A74AC043E40}Common/Materials/Game/Sand/sand_beach_grass.gamemat"
+ BCRMap "{C6A0995C60084476}Terrains/Common/Surfaces/Data/Dirt_01_BCR.edds"
+ NHOMap "{E197D218634E0261}Terrains/Common/Surfaces/Data/Dirt_01_NHO.edds"
+ ScaleUV 2
+ ParallaxScale 0.02
+ SatMapBlend 0.6
+ SatMapBrightness 0.35
+ LocalShadowBias 0.3
+ DetailMaxDistance 75
+ DetailBlendDistance 75
+ PlantMat "{E8ABEC8EF550CEF6}Assets/Clutter/Procedural/cp_grass_beach.emat"
+ DebugColor 0.581 0.651 0.327 0
+ BCRMiddleMap "{53BCC50AB9961024}Terrains/Common/Surfaces/Data/BeachGrass_01_Middle_BCR.edds"
+ NHOMiddleMap "{8BB579803DEA5C91}Terrains/Common/Surfaces/Data/Grass_01_Middle_NHO.edds"
+ MiddleNOBlend 0
+ MiddleNOPower 0.8
+ MiddleBCRBlend 0
+ PorosityScale 0.5
+ WaterAccumDetail 0.9
+ WaterAccumMiddle 0.7
+ WetnessFadeOverride 1
+ WetnessFadeStart 5
+ WetnessFadeSize 20
+}

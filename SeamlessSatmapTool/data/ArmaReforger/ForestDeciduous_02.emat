@@ -1,0 +1,25 @@
+TerrainMaterial {
+ SpecularIBL 0.502 0.502 0.502 1
+ SurfaceProperties "{11FB10800C238E2B}Common/Materials/Game/soil_forest_deciduous.gamemat"
+ BCRMap "{B3127C4A0C5747D1}Terrains/Common/Surfaces/Data/ForestDeciduous_lush_BCR.edds"
+ NHOMap "{9425370E0F1101C6}Terrains/Common/Surfaces/Data/ForestDeciduous_lush_NHO.edds"
+ DielectricReflectance 0.02
+ ScaleUV 4
+ ParallaxScale 0.02
+ SatMapBlend 0
+ LocalShadowBias 0.2
+ DetailBlendDistance 80
+ ClutterConfig "{757FDE5BF86951A9}Configs/Clutter/Sets/c_set_Forest_dec_02.conf"
+ DebugColor 0.205 0.412 0.257 1
+ MiddleColor 0.188 0.116 0.085 1
+ BCRMiddleMap "{09B8BC62A94C2BC9}Terrains/Common/Surfaces/Data/Dirt_01_Middle_BCR.edds"
+ NHOMiddleMap "{2E8FF726AA0A6DDE}Terrains/Common/Surfaces/Data/Dirt_01_Middle_NHO.edds"
+ MiddleScaleUV 73
+ MiddleNOBlend 0.5
+ MiddleNOPower 1.2
+ MiddleBCRBlend 0
+ WetnessScale 0.75
+ PorosityScale 0.7
+ WaterAccumDetail 0.55
+ WaterAccumMiddle 0.5
+}

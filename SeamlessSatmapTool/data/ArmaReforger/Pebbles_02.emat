@@ -1,0 +1,21 @@
+TerrainMaterial {
+ SurfaceProperties "{C800A9F58F7C0CBC}Common/Materials/Game/pebbles_02.gamemat"
+ BCRMap "{C4751AA808974180}Terrains/Common/Surfaces/Data/Pebbles_02_BCR.edds"
+ NHOMap "{E34251EC0BD10797}Terrains/Common/Surfaces/Data/Pebbles_02_NHO.edds"
+ ScaleUV 4
+ ParallaxScale 0.024
+ SatMapBlend 0
+ LocalShadowBias 0.4
+ CavityFromAO 0.2
+ DetailMaxDistance 150
+ DetailBlendDistance 150
+ ClutterConfig "{F3E7DB655BF2465D}Configs/Clutter/Sets/c_set_Pebbles_02.conf"
+ DebugColor 1 1 0 1
+ BCRMiddleMap "{D9A59E134333BF1B}Terrains/Common/Surfaces/Data/Pebbles_02_Middle_BCR.edds"
+ NHOMiddleMap "{6EB5A8B366496A53}Terrains/Common/Surfaces/Data/Pebbles_02_Middle_NHO.edds"
+ MiddleScaleUV 80
+ MiddleNOBlend 0.6
+ MiddleNOPower 0.8
+ MiddleBCRBlend 2
+ WaterAccumDetail 1.1
+}

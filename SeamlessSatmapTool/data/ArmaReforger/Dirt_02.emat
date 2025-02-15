@@ -1,0 +1,22 @@
+TerrainMaterial {
+ SurfaceProperties "{92113D135268D329}Common/Materials/Game/soil.gamemat"
+ BCRMap "{7349CB295FEFD3D6}Terrains/Common/Surfaces/Data/Soil_2x2_01_BCR.edds"
+ NHOMap "{547E806D5CA995C1}Terrains/Common/Surfaces/Data/Soil_2x2_01_NHO.edds"
+ ScaleUV 4
+ ParallaxScale 0.03
+ SatMapBlend 0
+ LocalShadowBias 0.3
+ DetailMaxDistance 150
+ DetailBlendDistance 150
+ ClutterConfig "{E9CCFDC649058942}Configs/Clutter/Sets/c_set_Dirt_02.conf"
+ DebugColor 0.502 0.376 0 1
+ MiddleColor 0.175 0.123 0.07 1
+ BCRMiddleMap "{09B8BC62A94C2BC9}Terrains/Common/Surfaces/Data/Dirt_01_Middle_BCR.edds"
+ NHOMiddleMap "{2E8FF726AA0A6DDE}Terrains/Common/Surfaces/Data/Dirt_01_Middle_NHO.edds"
+ MiddleScaleUV 50
+ MiddleNOBlend 0.337
+ MiddleBCRBlend 1
+ WetnessScale 0.85
+ WaterAccumDetail 0.75
+ WaterAccumMiddle 0.5
+}

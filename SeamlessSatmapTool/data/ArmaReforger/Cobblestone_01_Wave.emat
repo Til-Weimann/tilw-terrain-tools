@@ -1,0 +1,20 @@
+TerrainMaterial {
+ SurfaceProperties "{561F9D5A365B9BDC}Common/Materials/Game/cobblestone.gamemat"
+ BCRMap "{BDCDD696B2758208}Terrains/Common/Surfaces/Data/Cobblestone_01_Wave_BCR.edds"
+ NHOMap "{9AFA9DD2B133C41F}Terrains/Common/Surfaces/Data/Cobblestone_01_Wave_NHO.edds"
+ ScaleUV 3
+ ParallaxScale 0.01
+ SatMapBlend 0
+ LocalShadowBias 0.4
+ DetailMaxDistance 500
+ DetailBlendDistance 450
+ DebugColor 0.714 0.714 0.714 1
+ BCRMiddleMap "{9EF918C76A513A39}Terrains/Common/Surfaces/Data/WaveCobblestone_01_Middle_BCR.edds"
+ NHOMiddleMap "{2D0FED8C7D261F5B}Terrains/Common/Surfaces/Data/Cobblestone_01_Wave_Middle_NHO.edds"
+ MiddleScaleUV 64
+ MiddleNOBlend 0.574
+ MiddleNOPower 0.184
+ MiddleBCRBlend 0.3
+ WetnessScale 0.8
+ WaterAccumMiddle 1.6
+}

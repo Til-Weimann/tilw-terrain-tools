@@ -1,0 +1,5 @@
+TerrainMaterial : "{996EF97038EBD49D}Terrains/Common/Surfaces/Grass_03.emat" {
+ ScaleUV 3.9
+ PlantMat "{FD083360E177822F}Assets/Clutter/Procedural/cp_grass_03_coastal.emat"
+ ClutterConfig "{AF5FDAE7EC8FFD9F}Configs/Clutter/Sets/c_set_Grass_03_coastal.conf"
+}

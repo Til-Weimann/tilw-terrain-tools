@@ -1,0 +1,31 @@
+TerrainMaterial {
+ SpecularIBL 0.392 0.392 0.392 1
+ Diffuse 1 1 1 1
+ SurfaceProperties "{A5388C69AEDCBF4A}Common/Materials/Game/grass_lush.gamemat"
+ BCRMap "{640A83C1DA73248A}Terrains/Common/Surfaces/Data/GrassLawn_01_BCR.edds"
+ NHOMap "{433DC885D935629D}Terrains/Common/Surfaces/Data/GrassLawn_01_NHO.edds"
+ DielectricReflectance 0.02
+ ScaleUV 4
+ ParallaxScale 0.04
+ SatMapBlend 0.7
+ SatMapBrightness 0.5
+ LocalShadowBias 0.4
+ CavityFromAO 0.4
+ DetailMaxDistance 50
+ DetailBlendDistance 50
+ PlantMat "{D616E1308B9B93EE}Assets/Clutter/Procedural/cp_grass_02.emat"
+ ClutterConfig "{DCC9EBAE722D53CF}Configs/Clutter/Sets/c_set_Grass_02.conf"
+ DebugColor 0.259 0.686 0.365 1
+ BCRMiddleMap "{AC8232C43EAC1A86}Terrains/Common/Surfaces/Data/Grass_01_Middle_BCR.edds"
+ NHOMiddleMap "{8BB579803DEA5C91}Terrains/Common/Surfaces/Data/Grass_01_Middle_NHO.edds"
+ MiddleNOBlend 0
+ MiddleNOPower 1
+ MiddleBCRBlend 1
+ WetnessScale 0.2
+ PorosityScale 0
+ WaterAccumDetail 0
+ WaterAccumMiddle 0
+ WetnessFadeOverride 1
+ WetnessFadeStart 5
+ WetnessFadeSize 20
+}

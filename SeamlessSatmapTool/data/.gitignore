@@ -1,4 +1,9 @@
 # Ignore everything in this directory
 *
-# Except this file
+
+# Do not ignore the .gitignore file
 !.gitignore
+
+# Do not ignore my-folder and its contents
+!ArmaReforger/
+!ArmaReforger/**

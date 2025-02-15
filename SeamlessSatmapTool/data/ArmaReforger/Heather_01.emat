@@ -1,0 +1,31 @@
+TerrainMaterial {
+ Color 1 1 1 1
+ SpecularIBL 0.216 0.216 0.216 1
+ Diffuse 1 1 1 1
+ SurfaceProperties "{DF794DA7481AD2F4}Common/Materials/Game/grass_heather.gamemat"
+ BCRMap "{5D7229D92B909D92}Terrains/Common/Surfaces/Data/MountainGrass_01_BCR.edds"
+ NHOMap "{7A45629D28D6DB85}Terrains/Common/Surfaces/Data/MountainGrass_01_NHO.edds"
+ DielectricReflectance 0.02
+ ScaleUV 3.9
+ ParallaxScale 0.03
+ SatMapBlend 0
+ LocalShadowBias 0.5
+ CavityFromAO 1
+ DetailMaxDistance 50
+ DetailBlendDistance 50
+ PlantMat "{D8417D5E4978916B}Assets/Clutter/Procedural/cp_MountainGrass_01_ForHeather.emat"
+ ClutterConfig "{EE9E7B0E2E6BF47C}Configs/Clutter/Sets/c_set_Heather_01.conf"
+ DebugColor 0.654 0.326 0.454 1
+ BCRMiddleMap "{D4B631ED662C5287}Terrains/Common/Surfaces/Data/Heather_01_Middle_BCR.edds"
+ NHOMiddleMap "{8BB579803DEA5C91}Terrains/Common/Surfaces/Data/Grass_01_Middle_NHO.edds"
+ MiddleScaleUV 50
+ MiddleNOBlend 0
+ MiddleNOPower 1.5
+ MiddleBCRBlend 1.1
+ WetnessScale 0.15
+ PorosityScale 0
+ WaterAccumMiddle 0.2
+ WetnessFadeOverride 1
+ WetnessFadeStart 5
+ WetnessFadeSize 20
+}

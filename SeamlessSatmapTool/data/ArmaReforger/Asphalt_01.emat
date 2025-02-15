@@ -1,0 +1,22 @@
+TerrainMaterial {
+ Color 0.88 0.856 0.833 1
+ CastShadow 0
+ SurfaceProperties "{1780FBB7FA2F25FC}Common/Materials/Game/asphalt.gamemat"
+ BCRMap "{53DE60D89AFCD8A9}Terrains/Common/Surfaces/Data/Asphalt_01_4x4_BCR.edds"
+ NHOMap "{74E92B9C99BA9EBE}Terrains/Common/Surfaces/Data/Asphalt_01_4x4_NHO.edds"
+ DielectricReflectance 0.02
+ ScaleUV 6
+ ParallaxScale 0.01
+ SatMapBlend 0.1
+ LocalShadowBias 0.5
+ DetailMaxDistance 500
+ DetailBlendDistance 450
+ DebugColor 0.38 0.38 0.38 1
+ BCRMiddleMap "{612779FC7668F102}Terrains/Common/Surfaces/Data/Asphalt_01_Middle_BCR.edds"
+ NHOMiddleMap "{461032B8752EB715}Terrains/Common/Surfaces/Data/Asphalt_01_Middle_NHO.edds"
+ MiddleScaleUV 50
+ MiddleNOBlend 0.4
+ MiddleBCRBlend 0.4
+ WaterAccumDetail 0.05
+ WaterAccumMiddle 1.6
+}

@@ -1,0 +1,23 @@
+TerrainMaterial {
+ SpecularIBL 0.502 0.502 0.502 1
+ SurfaceProperties "{E046E80D76B97814}Common/Materials/Game/soil_forest_coniferous.gamemat"
+ BCRMap "{0C466CD605DB7E38}Terrains/Common/Surfaces/Data/ForestClearing_Deciduous_01_BCR.edds"
+ NHOMap "{2B712792069D382F}Terrains/Common/Surfaces/Data/ForestClearing_Deciduous_01_NHO.edds"
+ ScaleUV 3.99
+ ParallaxScale 0.015
+ SatMapBlend 0
+ LocalShadowBias 0.65
+ CavityFromAO 1
+ DetailBlendDistance 80
+ ClutterConfig "{9FA5C2E2C9011610}Configs/Clutter/Sets/c_set_ForestClearingDec_01.conf"
+ DebugColor 0.071 0.561 0.192 1
+ MiddleColor 0.125 0.087 0.056 1
+ BCRMiddleMap "{09B8BC62A94C2BC9}Terrains/Common/Surfaces/Data/Dirt_01_Middle_BCR.edds"
+ NHOMiddleMap "{2E8FF726AA0A6DDE}Terrains/Common/Surfaces/Data/Dirt_01_Middle_NHO.edds"
+ MiddleScaleUV 75
+ MiddleNOBlend 0.5
+ MiddleNOPower 1.2
+ MiddleBCRBlend 2
+ WetnessScale 0.75
+ PorosityScale 0.7
+}

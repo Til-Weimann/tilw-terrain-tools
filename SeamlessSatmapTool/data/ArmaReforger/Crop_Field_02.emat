@@ -1,0 +1,24 @@
+TerrainMaterial {
+ Color 1 1 1 1
+ SpecularIBL 0.216 0.216 0.216 1
+ SurfaceProperties "{998711ADEC77B4F3}Common/Materials/Game/grass_crops_cut.gamemat"
+ BCRMap "{5294A3029913479F}Terrains/Common/Surfaces/Data/Crop_Field_02_BCR.edds"
+ NHOMap "{75A3E8469A550188}Terrains/Common/Surfaces/Data/Crop_Field_02_NHO.edds"
+ DielectricReflectance 0.02
+ ScaleUV 2
+ ParallaxScale 0.03
+ SatMapBlend 0.6
+ SatMapBrightness 0.5
+ DetailBlendDistance 100
+ PlantMat "{2EA8190D3146D98B}Assets/Clutter/Procedural/cp_wheat_cut_01.emat"
+ DebugColor 0.937 0.827 0.496 1
+ BCRMiddleMap "{4197822CB3A86E7B}Terrains/Common/Surfaces/Data/Crop_Field_02_Middle_BCR.edds"
+ NHOMiddleMap "{44DAF8EB024976B4}Terrains/Common/Surfaces/Data/Crop_Field_Middle_NHO.edds"
+ MiddleScaleUV 150
+ MiddleNOBlend 0.3
+ MiddleBCRBlend 0
+ WetnessScale 0.35
+ PorosityScale 0
+ WaterAccumDetail 0.521
+ WaterAccumMiddle 1.5
+}

@@ -1,0 +1,21 @@
+TerrainMaterial {
+ Color 0.592 0.623 0.631 1
+ SurfaceProperties "{1A05231C3FD1627A}Common/Materials/Game/concrete.gamemat"
+ BCRMap "{10CF8623F332BD9B}Terrains/Common/Surfaces/Data/Concrete01_3x3_BCR.edds"
+ NHOMap "{37F8CD67F074FB8C}Terrains/Common/Surfaces/Data/Concrete01_3x3_NHO.edds"
+ ScaleUV 4
+ ParallaxScale 0.01
+ SatMapBlend 0.1
+ LocalShadowBias 0.5
+ CavityFromAO 0.5
+ DetailBlendDistance 100
+ DebugColor 0.373 0.467 0.749 1
+ BCRMiddleMap "{DB8243EFBDCD7FE9}Terrains/Common/Surfaces/Data/Concrete_01_Middle_BCR.edds"
+ NHOMiddleMap "{461032B8752EB715}Terrains/Common/Surfaces/Data/Asphalt_01_Middle_NHO.edds"
+ MiddleScaleUV 50
+ MiddleNOBlend 0.2
+ MiddleNOPower 0.75
+ MiddleBCRBlend 1
+ WaterAccumDetail 0.8
+ WaterAccumMiddle 1.6
+}
