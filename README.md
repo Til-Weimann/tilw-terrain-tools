@@ -11,7 +11,7 @@ This repository contains custom tools created by TilW, useful for terrain creati
 # Tools
 
 - Enhanced Map Tool ([Guide](https://github.com/Til-Weimann/tilw-terrain-tools/wiki/Enhanced-Map-Tool))
-- TilW Satmap Tool
+- Seamless Satmap Tool ([Guide](https://github.com/Til-Weimann/tilw-terrain-tools/wiki/Seamless-Satmap-Tool))
 
 # Q&A
 
