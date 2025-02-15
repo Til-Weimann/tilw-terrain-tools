@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 import math
 
-print("Unnamed Satmap Generation Tool by TilW")
+print("Seamless Satmap Tool, by TilW")
 
 size_input = input("Enter terrain size in meters, separated by an x - e. g. 4096x4096: ")
 nums = size_input.split("x")
@@ -19,6 +19,7 @@ data_dir = os.path.join(wdir, "data")
 
 
 class IncrementalBlender:
+    # Everyone please give a round of applause to ChatGPT for this blender thing, most of the rest I did myself though lol
     def __init__(self):
         """
         Initialize the blender with accumulators for the blended image and total mask.
@@ -129,9 +130,6 @@ def linear_to_srgb(color):
 print("Starting generation...")
 start_time = time.time()
 
-images = []
-masks = []
-
 blender = IncrementalBlender()
 
 for mask_file in os.listdir(masks_dir):
@@ -141,7 +139,7 @@ for mask_file in os.listdir(masks_dir):
     mask_name = os.fsdecode(mask_file).removesuffix('.png')
     print("Processing mask: " + mask_name)
     middle_scale = float(get_mat_param(mask_name, "MiddleScaleUV"))
-    tile_size = (math.ceil(terrain_size[0] / middle_scale), math.ceil(terrain_size[1] / middle_scale)) # 4096 / 100 = 40,69
+    tile_size = (math.ceil(terrain_size[0] / middle_scale), math.ceil(terrain_size[1] / middle_scale))
     
     mm_name = get_mat_param(mask_name, "BCRMiddleMap")
     if mm_name is None:
@@ -156,7 +154,7 @@ for mask_file in os.listdir(masks_dir):
         continue
     middle_map = Image.open(mm_fp)
 
-    middle_map = middle_map.resize(tile_size) # 512x512
+    middle_map = middle_map.resize(tile_size)
 
     layer = Image.new("RGBA", terrain_size)
 
