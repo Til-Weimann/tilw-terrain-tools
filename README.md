@@ -1,5 +1,5 @@
 # tilw-terrain-tools
-This repository contains custom tools created by TilW, useful for terrain creation.
+This repository contains custom tools created by TilW, useful for Arma Reforger terrain creation.
 
 > [!NOTE]
 > If these tools helped you, please link them in your mod description, so other modders can find out about them.
