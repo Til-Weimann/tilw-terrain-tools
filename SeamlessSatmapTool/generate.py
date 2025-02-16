@@ -3,7 +3,6 @@ from PIL import Image
 import numpy as np
 import time
 from pathlib import Path
-import math
 
 print("Seamless Satmap Tool, by TilW")
 
@@ -77,11 +76,11 @@ class IncrementalBlender:
 def get_mat_param(mat_name, param_name):
     # Search for the mat_name file
     for mp in Path(data_dir).rglob(mat_name + '.emat'):
-        result = search_mat_file(mp, param_name) # Search for parameter
+        result = search_mat_file(mp, " " + param_name + " ") # Search for parameter
         if result != None:
             return result
         
-        parent = search_mat_file(mp, "TerrainMaterial :") # Search for parent material
+        parent = search_mat_file(mp, "TerrainMaterial : ") # Search for parent material
         if parent != None:
             return get_mat_param(extract_fn_from_rn(parent), param_name) # Look in parent material instead
             # "{F4587E72B95D842B}Terrains/Common/Surfaces/Pebbles_02.emat" {
@@ -103,7 +102,7 @@ def search_mat_file(mat_fp, param_name):
     if os.path.exists(mat_fp):
         with open(mat_fp) as file:
             for line in file:
-                words = line.split(param_name + " ")
+                words = line.split(param_name)
                 if len(words) == 1:
                     continue
                 return words[1].removesuffix("\n")
@@ -138,8 +137,6 @@ for mask_file in os.listdir(masks_dir):
         continue
     mask_name = os.fsdecode(mask_file).removesuffix('.png')
     print("Processing mask: " + mask_name)
-    middle_scale = float(get_mat_param(mask_name, "MiddleScaleUV"))
-    tile_size = (math.ceil(terrain_size[0] / middle_scale), math.ceil(terrain_size[1] / middle_scale))
     
     mm_name = get_mat_param(mask_name, "BCRMiddleMap")
     if mm_name is None:
@@ -154,6 +151,8 @@ for mask_file in os.listdir(masks_dir):
         continue
     middle_map = Image.open(mm_fp)
 
+    middle_scale = float(get_mat_param(mask_name, "MiddleScaleUV"))
+    tile_size = (round(middle_scale), round(middle_scale))
     middle_map = middle_map.resize(tile_size)
 
     layer = Image.new("RGBA", terrain_size)
@@ -177,11 +176,14 @@ for mask_file in os.listdir(masks_dir):
     mask = Image.open(os.path.join(masks_dir, mask_file)).convert('L')
     mask = mask.resize(terrain_size)
 
-    color_params = get_mat_param(mask_name, "MiddleColor").split(" ")
-    color = np.array((float(color_params[0]), float(color_params[1]), float(color_params[2]), float(color_params[3])), np.float32)
-
+    color_params_m = get_mat_param(mask_name, "MiddleColor").split(" ")
+    color_params_d = get_mat_param(mask_name, "Color").split(" ")
+    color_m = np.array((float(color_params_m[0]), float(color_params_m[1]), float(color_params_m[2]), float(color_params_m[3])), np.float32)
+    color_d = np.array((float(color_params_d[0]), float(color_params_d[1]), float(color_params_d[2]), float(color_params_d[3])), np.float32)
+    color = linear_to_srgb(color_m * color_d)
+    
     layer_np = np.array(layer, np.float32)
-    layer_np *= linear_to_srgb(color)
+    layer_np *= color
     layer_np = np.clip(layer_np, 0, 255)
     layer = Image.fromarray(layer_np.astype(np.uint8), "RGBA")
     
