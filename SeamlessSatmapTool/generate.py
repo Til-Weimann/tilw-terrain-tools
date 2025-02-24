@@ -4,6 +4,8 @@ import numpy as np
 import time
 from pathlib import Path
 
+Image.MAX_IMAGE_PIXELS = None
+
 print("Seamless Satmap Tool, by TilW")
 
 size_input = input("Enter terrain size in meters, separated by an x - e. g. 4096x4096: ")
