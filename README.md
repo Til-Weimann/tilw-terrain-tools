@@ -14,7 +14,7 @@ This repository contains custom tools created by TilW, useful for Arma Reforger 
 # Tools
 
 - Enhanced Map Tool ([Guide](https://github.com/Til-Weimann/tilw-terrain-tools/wiki/Enhanced-Map-Tool))
-- Seamless Satmap Tool ([Guide](https://github.com/Til-Weimann/tilw-terrain-tools/wiki/Seamless-Satmap-Tool))
+- Seamless Satmap Tool ([Guide](https://github.com/Til-Weimann/tilw-terrain-tools/wiki/Seamless-Satmap-Tool), [Video Tutorial](https://youtu.be/IuKbrGqPy1g))
 
 # Q&A
 
