@@ -6,7 +6,7 @@ from pathlib import Path
 
 Image.MAX_IMAGE_PIXELS = None
 
-print("Seamless Satmap Tool, by TilW")
+print("Seamless Satmap Tool, by TilW", flush=True)
 
 size_input = input("Enter terrain size in meters, separated by an x - e. g. 4096x4096: ")
 nums = size_input.split("x")
@@ -128,7 +128,7 @@ def linear_to_srgb(color):
 
 # Generation ----------------------------------------------------------------------------------------------------
 
-print("Starting generation...")
+print("Starting generation...", flush=True)
 start_time = time.time()
 
 blender = IncrementalBlender()
@@ -138,18 +138,18 @@ for mask_file in os.listdir(masks_dir):
     if not mask_file.endswith(".png"):
         continue
     mask_name = os.fsdecode(mask_file).removesuffix('.png')
-    print("Processing mask: " + mask_name)
+    print("Processing mask: " + mask_name, flush=True)
     
     mm_name = get_mat_param(mask_name, "BCRMiddleMap")
     if mm_name is None:
-        print("ERROR - No material found for " + mask_name + ", skipping...")
+        print("ERROR - No material found for " + mask_name + ", skipping...", flush=True)
         continue
     mm_fp = find_file_in_dir(data_dir, extract_fn_from_rn(mm_name), ["png", "jpg"])
     if mm_fp is None:
-        print("ERROR - No texture found for " + mm_name + ", skipping...")
+        print("ERROR - No texture found for " + mm_name + ", skipping...", flush=True)
         continue
     if not os.path.exists(mm_fp):
-        print("ERROR - Texture " + mm_fp + " not found, skipping...")
+        print("ERROR - Texture " + mm_fp + " not found, skipping...", flush=True)
         continue
     middle_map = Image.open(mm_fp)
 
@@ -193,8 +193,8 @@ for mask_file in os.listdir(masks_dir):
 
 result = blender.get_result()
 del layer, layer_np, middle_map, mask
-print("Saving result...")
+print("Saving result...", flush=True)
 result.save(os.path.join(wdir, "RESULT.png"))
 del result
-print("Generation completed in " + str(round(time.time() - start_time, 2)) + " seconds!")
+print("Generation completed in " + str(round(time.time() - start_time, 2)) + " seconds!", flush=True)
 input("Press ENTER to close...")
