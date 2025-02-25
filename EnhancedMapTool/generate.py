@@ -6,6 +6,8 @@ from scipy.ndimage import binary_dilation
 import shutil
 import time
 
+Image.MAX_IMAGE_PIXELS = None
+
 start_time = time.time()
 
 wdir = os.getcwd()
@@ -17,14 +19,14 @@ with open(os.path.join(wdir, 'conf.yml'), 'r') as conf_file:
     conf = yaml.safe_load(conf_file)
 
 # Phase 1 - Verify setup
-print("Phase 1: Verifying setup...")
+print("Phase 1: Verifying setup...", flush=True)
 
 if not os.path.exists(conf["gdaldem-path"]):
-    print("Generation failed: GDAL not found, make sure the path is correct!")
+    print("Generation failed: GDAL not found, make sure the path is correct!", flush=True)
     input("Press ENTER to close...")
 
 if not os.path.exists(os.path.join(datadir, "hm.png")):
-    print("Generation failed: Heightmap (.../data/hm.png) not found, make sure you saved it to that folder with the right name!")
+    print("Generation failed: Heightmap (.../data/hm.png) not found, make sure you saved it to that folder with the right name!", flush=True)
     input("Press ENTER to close...")
 
 if not os.path.exists(tempdir):
@@ -32,7 +34,7 @@ if not os.path.exists(tempdir):
 
 # Phase 2 - Generate relief
 
-print("Phase 2: Generating relief...")
+print("Phase 2: Generating relief...", flush=True)
 
 hm = Image.open(os.path.join(datadir, "hm.png")).convert("I")
 if conf["cell-size"] != 2.0:
@@ -46,7 +48,7 @@ cmd = '"' + conf["gdaldem-path"] + '" hillshade ' + os.path.join(tempdir, "hm.pn
 os.system(cmd)
 
 # Phase 3 - Create ocean
-print("Phase 3: Creating ocean...")
+print("Phase 3: Creating ocean...", flush=True)
 
 hdata = np.array(hm)
 del hm
@@ -82,7 +84,7 @@ ocean_final.alpha_composite(orm)
 del orm
 
 # Phase 4 - Plot foliage
-print("Phase 4: Plotting foliage...")
+print("Phase 4: Plotting foliage...", flush=True)
 
 def plot_foliage(size, color, dil, offset, paths):
 
@@ -95,7 +97,7 @@ def plot_foliage(size, color, dil, offset, paths):
     offset_tuple =  (float(offset_coords[0]), float(offset_coords[2]))
 
     for path in paths:
-        print("Plotting " + path)
+        print("Plotting " + path, flush=True)
         img = Image.new('RGBA', size, (0, 0, 0, 0))
 
         if not os.path.exists(path):
@@ -135,7 +137,7 @@ veg_tex.alpha_composite(plot_foliage(size=hm_size, dil=1, color=conf["veg-color-
 veg_tex = veg_tex.filter(ImageFilter.GaussianBlur(0.6 * conf["veg-blur-size"]))
 
 # Phase 5 - Finish up
-print("Phase 5: Finishing up...")
+print("Phase 5: Finishing up...", flush=True)
 
 result = Image.alpha_composite(rm, ocean_final)
 result = result.filter(ImageFilter.GaussianBlur(0.75))
@@ -150,5 +152,5 @@ del result
 if os.path.exists(tempdir):
     shutil.rmtree(tempdir)
 
-print("Generation complete, it took " + str(round(time.time() - start_time, 2)) + " seconds!")
+print("Generation complete, it took " + str(round(time.time() - start_time, 2)) + " seconds!", flush=True)
 input("Press ENTER to close...")
