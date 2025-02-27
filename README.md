@@ -1,9 +1,6 @@
 # tilw-terrain-tools
 This repository contains custom tools created by TilW, useful for Arma Reforger terrain creation.
 
-> [!WARNING]
-> The **Enhanced Map Tool** needs a mod update to work correctly! As soon as it is ready, I will make a separate announcement for it.
-
 > [!NOTE]
 > If these tools helped you, please link them in your mod description, so other modders can find out about them.
 >
