@@ -6,9 +6,12 @@ from scipy.ndimage import binary_dilation
 import shutil
 import time
 import traceback
+import sys
 
 try:
     Image.MAX_IMAGE_PIXELS = None
+
+    print("Enhanced Map Tool, by TilW", flush=True)
 
     start_time = time.time()
 
@@ -26,10 +29,12 @@ try:
     if not os.path.exists(conf["gdaldem-path"]):
         print("Generation failed: GDAL not found, make sure the path is correct!", flush=True)
         input("Press ENTER to close...")
+        sys.exit()
 
     if not os.path.exists(os.path.join(datadir, "hm.png")):
         print("Generation failed: Heightmap (.../data/hm.png) not found, make sure you saved it to that folder with the right name!", flush=True)
         input("Press ENTER to close...")
+        sys.exit()
 
     if not os.path.exists(tempdir):
         os.makedirs(tempdir)
