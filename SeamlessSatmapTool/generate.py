@@ -124,7 +124,7 @@ try:
             pattern = f"{name}.{ext}"
             for fp in Path(dir).rglob(pattern):
                 return fp
-        print("ERROR - Failed to find file " + name + " " + str(extensions) + " in " + dir + " directory!")
+        print("ERROR - Failed to find file " + name + " " + str(extensions) + " in " + dir + " directory!", flush=True)
 
     def linear_to_srgb(color):
         def convert(c):
@@ -213,6 +213,6 @@ try:
     input("Press ENTER to close...")
 
 except Exception as ex:
-    print("FATAL ERROR - Exception occured during generation!")
+    print("FATAL ERROR - Exception occured during generation!", flush=True)
     traceback.print_exc()
     input("Press ENTER to close...")
