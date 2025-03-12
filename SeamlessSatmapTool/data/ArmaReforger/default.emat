@@ -1,0 +1,10 @@
+TerrainMaterial {
+ BCRMap "{2C7746265F1497BF}system/terrain/terrain_BCR.edds"
+ NHOMap "{0B400D625C52D1A8}system/terrain/terrain_NHO.edds"
+ ScaleUV 4.724
+ ParallaxScale 0.024
+ SatMapBlend 1
+ SatMapBrightness 0.5
+ LocalShadowBias 0.163
+ DebugColor 0.502 0.502 0.502 1
+}
