@@ -15,7 +15,7 @@ try:
 
     start_time = time.time()
 
-    wdir = os.getcwd()
+    wdir = os.path.dirname(os.path.realpath(__file__))
     tempdir = os.path.join(wdir, "temp")
     datadir = os.path.join(wdir, "data")
 

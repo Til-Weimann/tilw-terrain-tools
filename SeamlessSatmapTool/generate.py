@@ -15,7 +15,7 @@ try:
     nums = size_input.split("x")
     terrain_size = (round(float(nums[0])), round(float(nums[1])))
 
-    wdir = os.getcwd()
+    wdir = os.path.dirname(os.path.realpath(__file__))
     masks_dir = os.path.join(wdir, "masks")
     data_dir = os.path.join(wdir, "data")
 
