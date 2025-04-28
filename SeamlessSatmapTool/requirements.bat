@@ -1,3 +1,3 @@
-pip install numpy
-pip install Pillow
+py -m pip install numpy
+py -m pip install Pillow
 pause
