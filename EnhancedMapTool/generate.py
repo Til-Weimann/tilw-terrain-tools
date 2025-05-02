@@ -7,6 +7,7 @@ import shutil
 import time
 import traceback
 import sys
+import subprocess
 
 try:
     Image.MAX_IMAGE_PIXELS = None
@@ -52,8 +53,15 @@ try:
     hm_size = hm.size
 
     scale = conf["relief-strength"] * 15 * 2048 / ( conf["height-range-max"] - conf["height-range-min"] )
-    cmd = '"' + conf["gdaldem-path"] + '" hillshade ' + os.path.join(tempdir, "hm.png") + " " + os.path.join(tempdir, "rm.png") + " -igor -s " + str(scale)
-    os.system(cmd)
+    # Fixes abilitiy to work with spaces in file path.
+    subprocess.run([
+    conf["gdaldem-path"],
+    "hillshade",
+    os.path.join(tempdir, "hm.png"),
+    os.path.join(tempdir, "rm.png"),
+    "-igor",
+    "-s", str(scale)
+    ])
 
     # Phase 3 - Create ocean
     print("Phase 3: Creating ocean...", flush=True)
