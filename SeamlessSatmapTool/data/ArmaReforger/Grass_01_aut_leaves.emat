@@ -1,0 +1,6 @@
+TerrainMaterial : "{DDA71CDAA4F173A0}Terrains/Common/Surfaces/Grass_01_aut.emat" {
+ SurfaceProperties "{703D15E21BC86995}Common/Materials/Game/foliage_fallen_leaves.gamemat"
+ PlantMat "{781770B073E41762}Assets/Clutter/Procedural/cp_grass_01_leaves_aut.emat"
+ ClutterConfig "{A34784779D54D966}Configs/Clutter/Sets/c_set_Grass_01_leaves_aut.conf"
+ DebugColor 0.875 0.682 0.11 1
+}

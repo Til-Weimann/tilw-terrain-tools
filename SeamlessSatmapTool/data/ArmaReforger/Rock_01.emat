@@ -10,7 +10,7 @@ TerrainMaterial {
  CavityFromAO 0.4
  DetailMaxDistance 150
  DetailBlendDistance 100
- DebugColor 0.61 0.61 0.61 0
+ DebugColor 0.61 0.61 0.61 1
  BCRMiddleMap "{CB1FA8FC272E2225}Terrains/Common/Surfaces/Data/Debris_Rock_01_Middle_BCR.edds"
  NHOMiddleMap "{EC28E3B824686432}Terrains/Common/Surfaces/Data/Debris_Rock_01_Middle_NHO.edds"
  MiddleNOBlend 0.5

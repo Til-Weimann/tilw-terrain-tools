@@ -11,11 +11,12 @@ TerrainMaterial {
  DetailBlendDistance 100
  DebugColor 0.373 0.467 0.749 1
  BCRMiddleMap "{DB8243EFBDCD7FE9}Terrains/Common/Surfaces/Data/Concrete_01_Middle_BCR.edds"
- NHOMiddleMap "{461032B8752EB715}Terrains/Common/Surfaces/Data/Asphalt_01_Middle_NHO.edds"
- MiddleScaleUV 50
+ NHOMiddleMap "{37F8CD67F074FB8C}Terrains/Common/Surfaces/Data/Concrete01_3x3_NHO.edds"
+ MiddleScaleUV 30
  MiddleNOBlend 0.2
- MiddleNOPower 0.75
+ MiddleNOPower 0.5
  MiddleBCRBlend 1
+ PorosityScale 0.8
  WaterAccumDetail 0.8
  WaterAccumMiddle 1.6
 }

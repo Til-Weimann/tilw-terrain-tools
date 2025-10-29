@@ -1,0 +1,5 @@
+TerrainMaterial : "{B065B644DA70652D}Terrains/Common/Surfaces/ForestPine_01_Base.emat" {
+ DielectricReflectance 0.03
+ ClutterConfig "{7C24A46D3BB89A0A}Configs/Clutter/Sets/c_set_Forest_Pine_01_aut.conf"
+ MiddleColor 0.114 0.093 0.047 1
+}

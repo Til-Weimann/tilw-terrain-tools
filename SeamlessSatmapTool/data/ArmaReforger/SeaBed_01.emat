@@ -11,7 +11,7 @@ TerrainMaterial {
  DetailMaxDistance 106.667
  DetailBlendDistance 140
  ClutterConfig "{693C8628BDB84B53}Configs/Clutter/Sets/c_set_SeaBed_01.conf"
- DebugColor 1 0.41 0 0
+ DebugColor 1 0.41 0 1
  BCRMiddleMap "{F47A706758F1F382}Terrains/Common/Surfaces/Data/SeaBed_01_Middle_BCR.edds"
  NHOMiddleMap "{D34D3B235BB7B595}Terrains/Common/Surfaces/Data/SeaBed_01_Middle_NHO.edds"
  MiddleNOBlend 0.38

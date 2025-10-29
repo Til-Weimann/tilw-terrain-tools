@@ -1,0 +1,9 @@
+TerrainMaterial : "{916E4B9FEFDDDAAC}Terrains/Common/Surfaces/MountainGrass_01.emat" {
+ SatMapBlend 0
+ PlantMat "{7FCD5250AF1145E0}Assets/Clutter/Procedural/cp_MountainGrass_03.emat"
+ ClutterConfig "{50BF84B1903F9996}Configs/Clutter/Sets/c_set_MountainGrass_03.conf"
+ DebugColor 0.466 0.617 0.34 1
+ BCRMiddleMap "{F9847420FF633BC3}Terrains/Common/Surfaces/Data/MountainGrass_Middle_03_BCR.edds"
+ NHOMiddleMap "{DEB33F64FC257DD5}Terrains/Common/Surfaces/Data/MountainGrass_Middle_03_NHO.edds"
+ MiddleScaleUV 50
+}

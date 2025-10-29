@@ -19,7 +19,7 @@ TerrainMaterial {
  MiddleNOBlend 0.5
  MiddleNOPower 0.8
  MiddleBCRBlend 0
- WetnessScale 0.2
+ WetnessScale 0.22
  WaterAccumDetail 0.6
  WetnessFadeOverride 1
  WetnessFadeStart 3

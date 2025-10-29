@@ -1,0 +1,10 @@
+TerrainMaterial : "{916E4B9FEFDDDAAC}Terrains/Common/Surfaces/MountainGrass_01.emat" {
+ SpecularIBL 0.502 0.502 0.502 1
+ DielectricReflectance 0.03
+ SatMapBlend 0.35
+ SatMapBrightness 0.4
+ PlantMat "{E942A318263C496B}Assets/Clutter/Procedural/cp_MountainGrass_01_aut.emat"
+ ClutterConfig "{976F64BF43958779}Configs/Clutter/Sets/c_set_MountainGrass_01_aut.conf"
+ DebugColor 0.578 0.527 0.379 1
+ BCRMiddleMap "{EEB111A583C3C5CF}Terrains/Common/Surfaces/Data/MountainGrass_01_Middle_aut_BCR.edds"
+}

@@ -1,0 +1,8 @@
+TerrainMaterial : "{5DB25651114863A5}Terrains/Common/Surfaces/Heather_01.emat" {
+ SatMapBlend 0
+ DetailMaxDistance 50
+ DetailBlendDistance 30
+ ClutterConfig "{6FF0E62E88942022}Configs/Clutter/Sets/c_set_Heather_01_aut.conf"
+ BCRMiddleMap "{C536BC294C099264}Terrains/Common/Surfaces/Data/Heather_01_Middle_aut_BCR.edds"
+ MiddleScaleUV 40
+}

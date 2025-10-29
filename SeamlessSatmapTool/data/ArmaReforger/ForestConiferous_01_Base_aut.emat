@@ -1,0 +1,3 @@
+TerrainMaterial : "{4BE7110A9529C6E2}Terrains/Common/Surfaces/ForestConiferous_01_Base.emat" {
+ ClutterConfig "{143CE571FBA8D5DE}Configs/Clutter/Sets/c_set_Forest_con_01_aut.conf"
+}

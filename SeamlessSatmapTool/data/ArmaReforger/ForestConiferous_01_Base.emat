@@ -21,8 +21,8 @@ TerrainMaterial {
  MiddleNOBlend 0.5
  MiddleNOPower 1.2
  MiddleBCRBlend 1.5
- WetnessScale 0.75
- PorosityScale 0.7
- WaterAccumDetail 0.85
+ WetnessScale 0.9
+ PorosityScale 0.5
+ WaterAccumDetail 0.9
  WaterAccumMiddle 0.5
 }

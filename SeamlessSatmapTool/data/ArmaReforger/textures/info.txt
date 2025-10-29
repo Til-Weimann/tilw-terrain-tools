@@ -1,1 +1,3 @@
-These are processed versions of the 1.2 middle maps, downsized to a level useless for malicious purposes.
+These images are processed versions of the 1.6 middle maps.
+They are nececessary for the tool to function, and should not be used for anything else.
+Their resolution has been decreased to an extent that should make them useless for other purposes.

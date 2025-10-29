@@ -1,0 +1,25 @@
+TerrainMaterial {
+ SpecularIBL 0.863 0.863 0.863 1
+ SurfaceProperties "{C3691F2D8FE0234F}Common/Materials/Game/dirt.gamemat"
+ BCRMap "{26DE7932610228C1}Terrains/Common/Surfaces/Data/GrassWild_Coal_01_BCR.edds"
+ NHOMap "{01E9327662446ED6}Terrains/Common/Surfaces/Data/GrassWild_Coal_01_NHO.edds"
+ ScaleUV 4
+ ParallaxScale 0.02
+ SatMapBrightness 0.3
+ LocalShadowBias 0.7
+ DetailMaxDistance 150
+ DetailBlendDistance 150
+ ClutterConfig "{8E851D58379BE4E6}Configs/Clutter/Sets/c_set_Debris_Coal_03.conf"
+ DebugColor 0.638 0.619 0.531 1
+ MiddleColor 0.353 0.356 0.311 1
+ BCRMiddleMap "{0BA880B506491A1D}Terrains/Common/Surfaces/Data/Debris_Coal_02_Middle_BCR.edds"
+ NHOMiddleMap "{8BB579803DEA5C91}Terrains/Common/Surfaces/Data/Grass_01_Middle_NHO.edds"
+ MiddleScaleUV 40
+ MiddleNOBlend 0.5
+ MiddleNOPower 1
+ MiddleBCRBlend 0.3
+ WetnessScale 0.9
+ PorosityScale 0.3
+ WaterAccumMiddle 1.5
+ WetnessFadeSize 250
+}

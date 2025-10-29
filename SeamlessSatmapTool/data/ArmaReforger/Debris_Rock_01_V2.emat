@@ -1,0 +1,26 @@
+TerrainMaterial {
+ Color 0.956 1 0.999 1
+ Diffuse 1 1 1 1
+ SurfaceProperties "{8F2F46F3DE6C8A2B}Common/Materials/Game/debris_rock.gamemat"
+ BCRMap "{A63E46947BDE99D5}Terrains/Common/Surfaces/Data/Debris_Rock_01_BCR.edds"
+ NHOMap "{81090DD07898DFC2}Terrains/Common/Surfaces/Data/Debris_Rock_01_NHO.edds"
+ ScaleUV 4
+ ParallaxScale 0.05
+ SatMapBlend 0.5
+ SatMapBrightness 0.33
+ LocalShadowBias 0.4
+ CavityFromAO 0.6
+ DetailMaxDistance 150
+ DetailBlendDistance 150
+ ClutterConfig "{15518F05904BC5CC}Configs/Clutter/Sets/c_set_Debris_Rock_01.conf"
+ DebugColor 0.392 0.392 0.392 1
+ BCRMiddleMap "{CB1FA8FC272E2225}Terrains/Common/Surfaces/Data/Debris_Rock_01_Middle_BCR.edds"
+ NHOMiddleMap "{EC28E3B824686432}Terrains/Common/Surfaces/Data/Debris_Rock_01_Middle_NHO.edds"
+ MiddleScaleUV 30
+ MiddleNOBlend 0.5
+ MiddleNOPower 1
+ MiddleBCRBlend 0
+ PorosityScale 0.9
+ WaterAccumDetail 1.2
+ WaterAccumMiddle 0.9
+}

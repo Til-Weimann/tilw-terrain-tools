@@ -13,6 +13,7 @@ try:
     Image.MAX_IMAGE_PIXELS = None
 
     print("Enhanced Map Tool, by TilW", flush=True)
+    print("https://github.com/Til-Weimann/tilw-terrain-tools\n", flush=True)
 
     start_time = time.time()
 

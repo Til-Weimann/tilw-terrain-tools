@@ -11,7 +11,7 @@ TerrainMaterial {
  DetailMaxDistance 75
  DetailBlendDistance 75
  PlantMat "{E8ABEC8EF550CEF6}Assets/Clutter/Procedural/cp_grass_beach.emat"
- DebugColor 0.581 0.651 0.327 0
+ DebugColor 0.581 0.651 0.327 1
  BCRMiddleMap "{53BCC50AB9961024}Terrains/Common/Surfaces/Data/BeachGrass_01_Middle_BCR.edds"
  NHOMiddleMap "{8BB579803DEA5C91}Terrains/Common/Surfaces/Data/Grass_01_Middle_NHO.edds"
  MiddleNOBlend 0

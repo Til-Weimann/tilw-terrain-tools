@@ -1,0 +1,5 @@
+TerrainMaterial : "{4671DD9C64710D9A}Terrains/Common/Surfaces/ForestDeciduous_02.emat" {
+ BCRMap "{E045071D0E5ED55D}Terrains/Common/Surfaces/Data/ForestDeciduous_lush_aut_BCR.edds"
+ ClutterConfig "{6639F4D6BF50D2D0}Configs/Clutter/Sets/c_set_Forest_dec_02_aut.conf"
+ MiddleColor 0.142 0.113 0.051 1
+}

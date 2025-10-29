@@ -1,0 +1,31 @@
+TerrainMaterial {
+ Color 0.831 0.831 0.831 1
+ SpecularIBL 0.392 0.392 0.392 1
+ Diffuse 1 1 1 1
+ SurfaceProperties "{D95CA83488B14558}Common/Materials/Game/grass_lush_tall.gamemat"
+ BCRMap "{60F7B93EFB37B496}Terrains/Common/Surfaces/Data/MountainGrass_02_BCR.edds"
+ NHOMap "{47C0F27AF871F281}Terrains/Common/Surfaces/Data/MountainGrass_02_NHO.edds"
+ DielectricReflectance 0.02
+ ScaleUV 4
+ ParallaxScale 0.03
+ SatMapBrightness 0.35
+ LocalShadowBias 0.5
+ CavityFromAO 1
+ DetailMaxDistance 40
+ DetailBlendDistance 40
+ ClutterConfig "{21561BD6F25B62DE}Configs/Clutter/Sets/c_set_MountainGrass_02.conf"
+ DebugColor 0.578 0.529 0.387 1
+ BCRMiddleMap "{078434650A31578E}Terrains/Common/Surfaces/Data/MountainGrass_Middle_02_BCR.edds"
+ NHOMiddleMap "{6EB5A8B366496A53}Terrains/Common/Surfaces/Data/Pebbles_02_Middle_NHO.edds"
+ MiddleScaleUV 50
+ MiddleNOBlend 0
+ MiddleNOPower 1.5
+ MiddleBCRBlend 0
+ WetnessScale 0.2
+ PorosityScale 0
+ WaterAccumDetail 0
+ WaterAccumMiddle 0
+ WetnessFadeOverride 1
+ WetnessFadeStart 5
+ WetnessFadeSize 20
+}

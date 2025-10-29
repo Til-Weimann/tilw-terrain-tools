@@ -7,8 +7,7 @@ TerrainMaterial {
  SatMapBlend 0
  LocalShadowBias 0.4
  CavityFromAO 0.2
- DetailMaxDistance 150
- DetailBlendDistance 150
+ DetailBlendDistance 100
  ClutterConfig "{F3E7DB655BF2465D}Configs/Clutter/Sets/c_set_Pebbles_02.conf"
  DebugColor 1 1 0 1
  BCRMiddleMap "{D9A59E134333BF1B}Terrains/Common/Surfaces/Data/Pebbles_02_Middle_BCR.edds"
@@ -17,5 +16,5 @@ TerrainMaterial {
  MiddleNOBlend 0.6
  MiddleNOPower 0.8
  MiddleBCRBlend 2
- WaterAccumDetail 1.1
+ WetnessScale 0.8
 }

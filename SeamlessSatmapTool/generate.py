@@ -10,6 +10,7 @@ try:
     Image.MAX_IMAGE_PIXELS = None
 
     print("Seamless Satmap Tool, by TilW", flush=True)
+    print("https://github.com/Til-Weimann/tilw-terrain-tools\n", flush=True)
 
     size_input = input("Enter terrain size in meters, separated by an x - e. g. 4096x4096: ")
     nums = size_input.split("x")

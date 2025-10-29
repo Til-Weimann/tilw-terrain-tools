@@ -1,0 +1,5 @@
+TerrainMaterial : "{92100315809859F7}Terrains/Common/Surfaces/ForestClearing_Deciduous_01.emat" {
+ BCRMap "{B50036A437FFBE86}Terrains/Common/Surfaces/Data/ForestClearing_Deciduous_01_aut_BCR.edds"
+ ClutterConfig "{6E2728B2E2A32D03}Configs/Clutter/Sets/c_set_ForestClearingDec_01_aut.conf"
+ MiddleColor 0.141 0.096 0.061 1
+}

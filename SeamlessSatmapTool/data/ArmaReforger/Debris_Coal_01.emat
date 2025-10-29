@@ -1,0 +1,27 @@
+TerrainMaterial {
+ Color 0.578 0.578 0.578 1
+ SpecularIBL 0.627 0.627 0.627 1
+ Diffuse 1 1 1 1
+ SurfaceProperties "{8F2F46F3DE6C8A2B}Common/Materials/Game/debris_rock.gamemat"
+ BCRMap "{F6ED8898CB7C920E}Terrains/Common/Surfaces/Data/Debris_Coal_01_BCR.edds"
+ NHOMap "{D1DAC3DCC83AD419}Terrains/Common/Surfaces/Data/Debris_Coal_01_NHO.edds"
+ ScaleUV 4
+ ParallaxScale 0.04
+ SatMapBrightness 0.3
+ LocalShadowBias 0.99
+ CavityFromAO 0.6
+ DetailMaxDistance 150
+ DetailBlendDistance 150
+ ClutterConfig "{2465738385CB029E}Configs/Clutter/Sets/c_set_Debris_Coal_01.conf"
+ DebugColor 1 1 1 1
+ MiddleColor 0.231 0.231 0.231 1
+ BCRMiddleMap "{0BA880B506491A1D}Terrains/Common/Surfaces/Data/Debris_Coal_02_Middle_BCR.edds"
+ NHOMiddleMap "{6EB5A8B366496A53}Terrains/Common/Surfaces/Data/Pebbles_02_Middle_NHO.edds"
+ MiddleScaleUV 40
+ MiddleNOBlend 0.6
+ MiddleNOPower 1.99
+ MiddleBCRBlend 0.8
+ PorosityScale 0
+ WaterAccumDetail 0.6
+ WaterAccumMiddle 0.9
+}

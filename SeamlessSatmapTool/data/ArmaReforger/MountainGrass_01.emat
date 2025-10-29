@@ -7,8 +7,8 @@ TerrainMaterial {
  DielectricReflectance 0.02
  ScaleUV 4
  ParallaxScale 0.03
- SatMapBlend 0.7
- SatMapBrightness 0.35
+ SatMapBlend 0.35
+ SatMapBrightness 0.4
  LocalShadowBias 0.5
  CavityFromAO 1
  DetailMaxDistance 50
@@ -21,8 +21,7 @@ TerrainMaterial {
  MiddleNOBlend 0
  MiddleNOPower 1
  MiddleBCRBlend 0
- WetnessScale 0.2
- PorosityScale 0
+ WetnessScale 0.15
  WaterAccumDetail 0
  WaterAccumMiddle 0
  WetnessFadeOverride 1

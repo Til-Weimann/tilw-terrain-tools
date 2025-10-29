@@ -1,0 +1,29 @@
+TerrainMaterial {
+ Color 0.644 0.644 0.644 1
+ SurfaceProperties "{C3691F2D8FE0234F}Common/Materials/Game/dirt.gamemat"
+ BCRMap "{7A1B8682ACD229B9}Terrains/Common/Surfaces/Data/Dirt_03_BCR.edds"
+ NHOMap "{5D2CCDC6AF946FAE}Terrains/Common/Surfaces/Data/Dirt_03_NHO.edds"
+ DielectricReflectance 0.03
+ ScaleUV 8
+ ParallaxScale 0.04
+ SatMapBlend 0.25
+ SatMapBrightness 0.3
+ LocalShadowBias 0.338
+ CavityFromAO 0.5
+ DetailMaxDistance 150
+ DetailBlendDistance 150
+ ClutterConfig "{B724D485F688074D}Configs/Clutter/Sets/c_set_Dirt_01.conf"
+ DebugColor 0.447 0.41 0.3 1
+ MiddleColor 0.262 0.23 0.192 1
+ BCRMiddleMap "{94CACD2D0DE2C3D5}Terrains/Common/Surfaces/Data/Dirt_03_Middle_BCR.edds"
+ NHOMiddleMap "{AC1276BFD495914B}Terrains/Common/Surfaces/Data/Dirt_03_Middle_NHO.edds"
+ MiddleScaleUV 40
+ MiddleNOBlend 0.7
+ MiddleNOPower 0.7
+ MiddleBCRBlend 1.1
+ WetnessScale 0.85
+ PorosityScale 0.7
+ WaterAccumDetail 0.8
+ WaterAccumMiddle 1.3
+ WetnessFadeSize 250
+}

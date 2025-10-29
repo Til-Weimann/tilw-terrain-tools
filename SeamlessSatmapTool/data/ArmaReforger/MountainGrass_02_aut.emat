@@ -1,0 +1,5 @@
+TerrainMaterial : "{CF8662DC505054A3}Terrains/Common/Surfaces/MountainGrass_02.emat" {
+ ClutterConfig "{D79F459AF589053E}Configs/Clutter/Sets/c_set_MountainGrass_02_aut.conf"
+ DebugColor 1 0.915 0.665 1
+ BCRMiddleMap "{DE1A2CCDC882B846}Terrains/Common/Surfaces/Data/MountainGrass_Middle_02_aut_BCR.edds"
+}
