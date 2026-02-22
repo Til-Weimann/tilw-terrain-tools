@@ -66,7 +66,7 @@ try:
                 PIL.Image: The blended RGBA image.
             """
             if self.blended_accumulator is None:
-                raise ValueError("No images have been blended yet.")
+                raise ValueError("No images have been blended yet. Make sure you exported your masks to the right folder!")
 
             # Normalize the blended image by the total mask
             total_mask_accumulator = np.clip(self.total_mask_accumulator, 1e-6, None)  # Avoid division by zero
